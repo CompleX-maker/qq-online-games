@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(6px);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #38bdf8;
+  color: #001018;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.actions,
+.join-row,
+.invite-row,
+.game-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.join-row input,
+.invite-row input {
+  flex: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: #fda4af;
+}
+
+.tip {
+  color: #cbd5e1;
+}
+
+.player-list ul {
+  padding-left: 20px;
+}
+
+#gameArea {
+  margin-top: 16px;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 8px;
+  justify-content: center;
+}
+
+.ttt-cell {
+  width: 90px;
+  height: 90px;
+  background: #e2e8f0;
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gomoku-board {
+  display: grid;
+  grid-template-columns: repeat(15, 22px);
+  gap: 2px;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.gomoku-cell {
+  width: 22px;
+  height: 22px;
+  background: #d4a373;
+  border: 1px solid rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.gomoku-piece {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin: 1px auto;
+}
+
+.black {
+  background: #111;
+}
+
+.white {
+  background: #fff;
+  border: 1px solid #999;
+}
+
+.rps-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.rps-result {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+}
+
+@media (max-width: 600px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 70px);
+  }
+
+  .ttt-cell {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .gomoku-board {
+    grid-template-columns: repeat(15, 18px);
+  }
+
+  .gomoku-cell {
+    width: 18px;
+    height: 18px;
+  }
+
+  .gomoku-piece {
+    width: 14px;
+    height: 14px;
+  }
+}
